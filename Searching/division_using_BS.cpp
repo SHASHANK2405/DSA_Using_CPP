@@ -30,11 +30,26 @@ int solve(int dividend , int divisor){
 }
 
 int main(){
-    int dividend = -22;
+    int dividend = 22;
     int divisor = 7;
     int ans = solve(dividend , divisor);
 
-    cout<<"ans is "<<ans;
+    cout<<"ans is "<<ans<<endl;;
+
+    int precision;
+    cout<<"enter the no. of floating digits :";
+    cin>>precision;
+    double step =0.1;
+    double finalAns =ans;
+
+    for(int i= 0; i<precision ; i++){
+
+        for(double j=finalAns ; j*divisor <=dividend ; j=j+step ){
+            finalAns =j;
+        }
+        step=step/10;
+    }
+    cout<<"Final ans is :"<<finalAns<<endl;
 
     return 0;
 }
