@@ -1,16 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int n;
-    cout<<"enter the value of n :";
-    cin>>n;
-    for(int i=0; i<n; i++){
-        for(int j = n-i-1 ; j>0; j--){
-            cout<<" ";
+    cout << "enter the value of n :";
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n - i - 1; j > 0; j--)
+        {
+            cout << " ";
         }
-        for(int k=1 ; k<i+1 ; k++){
-            cout<<"* ";
+        for (int k = 1; k < i + 1; k++)
+        {
+            cout << "* ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
+
+//    *
+//   * *
+//  * * *
+// * * * *
